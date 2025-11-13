@@ -1,6 +1,14 @@
+import { Component, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { NgxsModule } from '@ngxs/store';
+import { AuthState } from './shared/states/auth-state';
+import { LoginComponent } from './app/login/login.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+
+export class App {
+  name = 'Angular';
+}
+
+bootstrapApplication(App, {
+  providers: [importProvidersFrom(NgxsModule.forRoot([AuthState]))],
+});
