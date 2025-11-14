@@ -2,13 +2,9 @@ import { Component, importProvidersFrom } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { NgxsModule } from '@ngxs/store';
 import { AuthState } from './shared/states/auth-state';
-import { LoginComponent } from './app/login/login.component';
+import { AppComponent } from './app/app.component';
 
 
-export class App {
-  name = 'Angular';
-}
-
-bootstrapApplication(App, {
+bootstrapApplication(AppComponent, {
   providers: [importProvidersFrom(NgxsModule.forRoot([AuthState]))],
 });
