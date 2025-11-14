@@ -3,7 +3,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { AuthConnexion } from '../../shared/actions/auth-action';
 import { Store } from '@ngxs/store';
 import { AuthState } from '../../shared/states/auth-state';
-import { CnxAuth } from './cnxAuth';
+import { CnxAuth } from './CnxAuth';
 
 @Component({
   selector: 'app-login',
